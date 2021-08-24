@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="./assets/css/style.css" />
         <meta charset="UTF-8" />
         <title>Run Buddy</title>
     </head>
@@ -27,8 +28,36 @@
             </nav>
         </header>
         
-        <section>
+        
+        <section class="hero">
+            <div class="hero-form">
+                <h3>Get Started Today!</h3>
+                <p>Fill out this form and one of our trainers will schedule a consult</p>
+                <form>
+                <br><label for="name">Enter your full name:</label>
+                <br><input type="text" placeholder="Your Name" name="name" id="name" />
+                <br><label for="email">Enter your email address:</label>
+                <br><input type="email" placeholder="Email Address" name="email" id="email" />
+                <br><label for="phone">Enter your phone number:</label>
+                <br><input type="tel" placeholder="Phone Number" name="phone" id="phone" />
+                    <p>
+                        Have you worked out with a trainer before?
+                        <input type="radio" name="trainer-confirm" id="trainer-yes" />
+                        <label for="trainer-yes">Yes</label>
+                        <input type="radio" name="trainer-confirm" id="trainer-no" />
+                        <label for="trainer-no">No</label>
+                      </p>
+                    <p>
+                        <input type="checkbox" name="age-check" id="age-check" />
+                        <label for="age-check">I acknowledge that I am at least 18 years of age</label>
+                    <br><button type="submit">
+                            Get running!
+                        </button>
+                    </p>
+                </form>
+            </div>
         </section>
+           
 
         <section>
             <h2>What We Do</h2>
@@ -51,7 +80,8 @@
                 <div>
                 <a href="#">Read Our Privacy Policy</a><br />
                 &copy; 2019 Run Buddy, Inc.
-                </div>❤️ Made with love by Run Buddy.
+                </div>
+                ❤️ Made with love by Run Buddy.
             </h2>
         </footer>
     </body>
