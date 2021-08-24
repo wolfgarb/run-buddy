@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -96,7 +95,7 @@ section {
   padding: 7px 15px;
   font-size: 14px;
   color: #024e76;
-  width: auto;
+  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -110,4 +109,19 @@ section {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 55px;
+  color: #024e76;
+  margin-bottom: 35px;
+  padding: 0 100px 20px 100px;
+  border-bottom: 3px solid;
+  border-color: #fce138;
+  display: inline-block;
+  text-align: center;
 }
