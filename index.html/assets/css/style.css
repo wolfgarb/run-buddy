@@ -68,7 +68,7 @@ section {
     background-position: center;
     position: relative;
   }
-
+  
 .hero-form {
     position: absolute;
     background-color: #fce138;
@@ -246,4 +246,9 @@ section {
   line-height: 1.5;
   font-size: 20px;
   font-style: normal;
+}
+
+.hero-secondary {
+  background-color: black;
+  color: red;
 }
