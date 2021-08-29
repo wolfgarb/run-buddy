@@ -8,10 +8,12 @@ body {
     color: #39a6b2;
     font-family: Helvetica, Arial, sans-serif;
   }
+
 header {
-    padding: 20px 35px;
-    background-color: #39a6b2;
+    padding: 20px 10px;
+    background-color: transparent;
 }
+
 header h1 {
     font-weight: bold;
     font-size: 36px;
@@ -67,6 +69,7 @@ section {
     background-size: cover;
     background-position: center;
     position: relative;
+    padding-top: 0;
   }
   
 .hero-form {
@@ -76,8 +79,10 @@ section {
     padding: 20px;
     width: 500px;
     border: solid 3px #024e76;
+    border-radius: 25px;
     bottom: 120px;
     right: 140px;
+    opacity: 75%;
 }
 
 .hero-form h3 {
@@ -251,4 +256,19 @@ section {
 .hero-secondary {
   background-color: black;
   color: red;
+}
+
+.hero-title {
+  font-style: italic;
+  text-align: right;
+  color: #fce138;
+  font-size: 56px;
+}
+
+.hero-cta {
+  display: inline-block;
+}
+
+.hero-cta p {
+  color: white;
 }
