@@ -29,24 +29,21 @@
 </header>
 
 <section class="hero">
-<div class="hero-cta">
-    <h2>
-        Start Building Habits.
-    </h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, deserunt. Obcaecati, quasi aliquid autem eligendi repellendus consectetur officiis maxime, dolorum debitis et perspiciatis. Rerum praesentium, delectus eius non similique sed.
-    </p>   
-</div>        
-<div class="hero-form">
-        <h3>Get Started Today!</h3>
-        <p>Fill out this form and one of our trainers will schedule a consult</p>
-        <form>
-        <br><label for="name">Enter your full name:</label>
-        <br><input type="text" placeholder="Your Name" name="name" id="name" />
-        <br><label for="email">Enter your email address:</label>
-        <br><input type="email" placeholder="Email Address" name="email" id="email" />
-        <br><label for="phone">Enter your phone number:</label>
-        <br><input type="tel" placeholder="Phone Number" name="phone" id="phone" />
+    <div class="flex-row">
+        <div class="hero-cta">
+            <h2>Start Building Habits.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, deserunt. Obcaecati, quasi aliquid autem eligendi repellendus consectetur officiis maxime, dolorum debitis et perspiciatis. Rerum praesentium, delectus eius non similique sed.</p>   
+        </div>        
+        <div class="hero-form">
+            <h3>Get Started Today!</h3>
+            <p>Fill out this form and one of our trainers will schedule a consult</p>
+            <form>
+            <br><label for="name">Enter your full name:</label>
+            <br><input type="text" placeholder="Your Name" name="name" id="name" />
+            <br><label for="email">Enter your email address:</label>
+            <br><input type="email" placeholder="Email Address" name="email" id="email" />
+            <br><label for="phone">Enter your phone number:</label>
+            <br><input type="tel" placeholder="Phone Number" name="phone" id="phone" />
             <p>
                 Have you worked out with a trainer before?
                 <input type="radio" name="trainer-confirm" id="trainer-yes" />
@@ -63,6 +60,7 @@
             </button>
             </p>
         </form>
+    </div>
 </div>
 </section>
            
@@ -140,45 +138,41 @@
 </div>
 </section>
 
-<section id="your-trainers" class="trainers">
+<section id="your-trainers">
     <div class="flex-row">
         <h2 class="section-title primary-border">
             Meet the Trainers
         </h2>
     </div>
+    <div class="trainers">
     <article class="trainer">
         <img src="./assets/images/trainer-1.jpg" alt="arron stephens" />
-    <div class="trainer-bio text-left">
-        <h3>Arron Stephens</h3>
-            <h4>Speed / Strength</h4>
-                <p>
-                    Lorem ipsum, and all that jazz.
-                </p>
+    <div class="trainer-bio">
+        <h3 class="trainer-name">Arron Stephens</h3>
+        <h4 class="trainer-role">Speed / Strength</h4>
+            <p>Lorem ipsum, and all that jazz.</p>
     </div>
     </article>
 <br>
     <article class="trainer">
-    <div class="trainer-bio text-right">
-        <h3>Joanna Gill</h3>
-            <h4>Experience</h4>
-                <p>
-                    Lorem ipsum, and all that jazz.
-                </p>
-    </div>
         <img src="./assets/images/trainer-2.jpg" alt="Joanna Gill" />
+    <div class="trainer-bio">
+        <h3 class="trainer-name">Joanna Gill</h3>
+        <h4 class="trainer-role">Experience</h4>
+            <p>Lorem ipsum, and all that jazz.</p>
+    </div>
     </article>
 <br>
     <article class="trainer">
         <img src="./assets/images/trainer-3.jpg" alt="harry smith" />
-    <div class="trainer-bio text-left">
-        <h3>Harry "The Headband" Smith</h3>
-            <h4>Sweaty</h4>
-                <p>
-                    Lorem ipsum, and all that jazz.
-                </p>
+    <div class="trainer-bio">
+        <h3 class="trainer-name">Harry "The Headband" Smith</h3>
+        <h4 class="trainer-role">Sweaty</h4>
+            <p>Lorem ipsum, and all that jazz.</p>
     </div>
     </article>
 <br>
+    </div>
 </section>
 
 <section id="reach-out" class="contact">
