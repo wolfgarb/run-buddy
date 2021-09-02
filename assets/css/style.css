@@ -82,7 +82,7 @@ section {
     background-position: center;
     position: relative;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
   }
   
@@ -352,13 +352,17 @@ section {
     text-align: center;
     width: 100%;
   }
+
   .hero-cta, .hero-form {
+    /* justify-content: center; */
     width: 100%;
-    /* display: flexbox; */
   }
+
   .hero-cta {
     text-align: center;
+    /* flex-wrap: wrap; */
   }
+
   .section-title {
     width: 80%;
   }
@@ -372,10 +376,51 @@ section {
 
 /* TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-
+  section {
+    padding: 30px 15px;
+  }
+  .step h3 {
+    flex: 1 100%;
+    text-align: center;
+  }
+  .step-info {
+    flex: 2 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .step-img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .step-text {
+    flex: 100%;
+  }
 }
+
 
 /* MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
-
+ .hero-form button {
+   width: 100%;
+ }
+ .section-title {
+   width: 95%;
+ }
+ .intro p {
+   width: 100%;
+ }
+ .trainer {
+   flex: 0 100%;
+ }
+ .contact-info {
+   text-align: center;
+ }
+ .contact-info > * {
+   flex: 0 100%;
+ }
+ .contact-form {
+   order: 3;
+ }
 }
