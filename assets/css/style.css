@@ -4,30 +4,46 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-yellow: #fce138;
+  --secondary-navy: #024e76;
+  --tertiary-teal: #39a6b2;
+}
+
 body {
-    color: #39a6b2;
+    color: var(--tertiary-teal);
     font-family: Helvetica, Arial, sans-serif;
   }
 
 header {
     padding: 20px 10px;
-    background-color: #39a6b2;
+    background-color: var(--tertiary-teal);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/hero-bg.jpg");
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
 }
 
 header h1 {
     font-weight: bold;
     font-size: 36px;
-    color: #fce138;
+    color: var(--primary-yellow);
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
   
 header a {
     text-decoration: none;
-    color: #fce138;
+    color: var(--primary-yellow);
   }
 
 header nav {
@@ -38,7 +54,14 @@ header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
+header nav ul li a:hover {
+  background: var(--primary-yellow);
+  color: var(--secondary-navy);
+  border-radius: 15px;
+  text-shadow: none;
+}
 
 header nav ul {
     display: flex;
@@ -49,7 +72,7 @@ header nav ul {
   } 
   
 footer {
-    background: #fce138;
+    background: var(--primary-yellow);
     width: 100%;
     padding: 40px 35px;
     display: flex;
@@ -58,7 +81,7 @@ footer {
   }
 
 footer h2 {
-    color: #024e76;
+    color: var(--secondary-navy);
     font-size: 25px;
     margin: 0;
   }
@@ -67,10 +90,10 @@ footer div {
     font-weight: lighter;
     text-align: right;
     font-size: 16px;
-    color: #39a6b2;
+    color: var(--tertiary-teal);
   }
 footer a {
-    color: #024e76;
+    color: var(--secondary-navy);
   }
 section {
     padding: 60px;
@@ -82,42 +105,46 @@ section {
     background-position: center;
     position: relative;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
   }
   
 .hero-form {
-    position: absolute;
-    background-color: #fce138;
-    color: #024e76;
+    background-color: rgba(252,225,56, 0.8);
+    color: var(--secondary-navy);
     padding: 20px;
     width: 40%;
-    border: solid 3px #024e76;
-    border-radius: 25px;
+    border: solid 3px var(--secondary-navy);
+    border-radius: 15px;
     bottom: 120px;
     right: 140px;
-    opacity: 75%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form h3 {
     margin: 0px;
     font-size: large;
 }
-
+/* somewhere here lies a mystery i need to solve */
 .hero-form p {
   margin: 5px 0 15px 0;
-  font-size: 14px;
 }
 
-.form-input {
-  border: 1px solid #024e76;
-  display: block;
+
+.hero-form input {
+  border: 1px solid var(--secondary-navy);
   padding: 7px 15px;
   font-size: 14px;
-  color: #024e76;
-  width: 100%;
+  color: var(--secondary-navy);
   margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 0.75);
+}
+
+.hero-form input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
 }
 
 .hero-form label {
@@ -125,13 +152,66 @@ section {
 }
 
 .hero-form button {
-  color: #fce138;
-  background-color: #024e76;
+  color: var(--primary-yellow);
+  background-color: var(--secondary-navy);
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10px;
 }
-
+.hero-form button:hover {
+  background-color: var(--tertiary-teal);
+}
+.checkbox-wrapper input, .radio-wrapper input {
+  opacity: 0;
+}
+.checkbox-wrapper label, .radio-wrapper label {
+  position: relative;
+  left: 10px;
+  margin: 10px;
+  line-height: 1.6;
+}
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: rgba(255,255,255, 0.75);
+  border: 1px solid var(--secondary-navy);
+  position: absolute;
+  top: -4px;
+  left: -30px;
+}
+.radio-wrapper label::before {
+  border-radius: 50%;
+}
+.radio-wrapper label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--secondary-navy);
+  position: absolute;
+  left: -29px;
+  top: -3px;
+  background-image: radial-gradient(circle, var(--tertiary-teal), var(--secondary-navy));
+}
+.checkbox-wrapper label::after {
+  content: "";
+  height: 6px;
+  width: 14px;
+  border-left: 2px solid var(--secondary-navy);
+  border-bottom: 2px solid var(--secondary-navy);
+  position: absolute;
+  left: -26px;
+  top: 1px;
+  transform: rotate(-58deg);
+}
+.checkbox-wrapper input + label::after, .radio-wrapper input + label::after {
+  content: none;
+}
+.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after {
+  content: "";
+}
 .hero-cta {
   width: 35%;
   text-align: right;
@@ -143,13 +223,14 @@ section {
 
 .hero-cta h2 {
   font-style: italic;
-  color: #fce138;
+  color: var(--primary-yellow);
   font-size: 55px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .intro p {
   line-height: 1.7;
-  color: #39a6b2;
+  color: var(--tertiary-teal);
   width: 80%;
   font-size: 20px;
   margin: 0 auto;
@@ -158,7 +239,7 @@ section {
 
 .section-title {
   font-size: 48px;
-  color: #024e76;
+  color: var(--secondary-navy);
   border-bottom: 3px solid;
   padding-bottom: 20px;
   text-align: center;
@@ -167,26 +248,29 @@ section {
 }
 
 .primary-border {
-  border-color: #fce138;
+  border-color: var(--primary-yellow);
 }
 
 .secondary-border {
-  border-color: #39a6b2;
+  border-color: var(--tertiary-teal);
 }
 
 .steps {
-  background: #fce138;
+  background: var(--primary-yellow);
 }
 
 .step {
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--tertiary-teal);
+}
+.step:last-child {
+  border-bottom: none;
 }
 
 .step-info {
@@ -206,7 +290,7 @@ section {
 }
 
 .step h3 {
-  color: #024e76;
+  color: var(--secondary-navy);
   font-size: 46px;
   flex: 1 30%;
 }
@@ -215,14 +299,14 @@ section {
   flex: 12;
 }
 .step-text p {
-  color: #39a6b2;
+  color: var(--tertiary-teal);
   font-size: 18px;
 }
 
 .step-text h4 {
   font-size: 26px;
   line-height: 1.5;
-  color: #024e76;
+  color: var(--secondary-navy);
 }
 
 .trainers {
@@ -234,8 +318,8 @@ section {
 }
 
 .trainer {
-  background: #024e76;
-  color: #fce138;
+  background: var(--secondary-navy);
+  color: var(--primary-yellow);
   margin: 20px;
   flex: 1;
 }
@@ -264,11 +348,11 @@ section {
 }
 
 .contact {
-  background: #024e76;
+  background: var(--secondary-navy);
 }
 
 .contact h2, .contact-info a {
-  color: #fce138;
+  color: var(--primary-yellow);
 }
 
 .contact div iframe {
@@ -276,7 +360,7 @@ section {
 }
 
 .contact-info h3 {
-  color: #fce138;
+  color: var(--primary-yellow);
   font-size: 32px;
 }
 
@@ -301,24 +385,35 @@ section {
 }
 
 .contact-form input, .contact-form textarea {
-  border: 1px solid #024e76;
+  border: 1px solid var(--secondary-navy);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: var(--secondary-navy);
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(225,255,255, 0.75);
 } 
+.contact-form input:focus, .contact-form textarea:focus {
+  background-color: rgba(225,255,255, 1);
+  outline: none;
+}
 
 .contact-form button {
   width: 100%;
   border: none;
-  background: #fce138;
-  color: #024e76;
+  background: var(--primary-yellow);
+  color: var(--secondary-navy);
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
+}
+.contact-form button:hover {
+  color: var(--primary-yellow);
+  background: var(--tertiary-teal);
 }
 
 .hero-secondary {
@@ -335,6 +430,7 @@ section {
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative;
   }
   header h1 {
     width: 100%;
@@ -352,13 +448,17 @@ section {
     text-align: center;
     width: 100%;
   }
+
   .hero-cta, .hero-form {
+    /* justify-content: center; */
     width: 100%;
-    /* display: flexbox; */
   }
+
   .hero-cta {
     text-align: center;
+    /* flex-wrap: wrap; */
   }
+
   .section-title {
     width: 80%;
   }
@@ -372,10 +472,51 @@ section {
 
 /* TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-
+  section {
+    padding: 30px 15px;
+  }
+  .step h3 {
+    flex: 1 100%;
+    text-align: center;
+  }
+  .step-info {
+    flex: 2 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .step-img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .step-text {
+    flex: 100%;
+  }
 }
+
 
 /* MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
-
+ .hero-form button {
+   width: 100%;
+ }
+ .section-title {
+   width: 95%;
+ }
+ .intro p {
+   width: 100%;
+ }
+ .trainer {
+   flex: 0 100%;
+ }
+ .contact-info {
+   text-align: center;
+ }
+ .contact-info > * {
+   flex: 0 100%;
+ }
+ .contact-form {
+   order: 3;
+ }
 }
