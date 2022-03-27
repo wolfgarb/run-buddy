@@ -8,9 +8,9 @@ A website that offers fitness training services.
 * CSS
 
 ## Website
-https://wolfgarb.github.io/run-buddy/
+https://wolfskillobyte.github.io/run-buddy/
 
 ## Contribution
-Made with ❤️ by wolfgarb
+Made with ❤️ by wolfskillobyte
 
 ### ©️2019 Run Buddy, Inc 
